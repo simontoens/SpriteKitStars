@@ -15,11 +15,8 @@
 		BEAA5C3E185EA90400CCDA82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA5C3D185EA90400CCDA82 /* main.m */; };
 		BEAA5C42185EA90400CCDA82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA5C41185EA90400CCDA82 /* AppDelegate.m */; };
 		BEAA5C45185EA90400CCDA82 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAA5C43185EA90400CCDA82 /* Main_iPhone.storyboard */; };
-		BEAA5C48185EA90400CCDA82 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAA5C46185EA90400CCDA82 /* Main_iPad.storyboard */; };
 		BEAA5C4B185EA90400CCDA82 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA5C4A185EA90400CCDA82 /* ViewController.m */; };
 		BEAA5C4E185EA90400CCDA82 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA5C4D185EA90400CCDA82 /* MyScene.m */; };
-		BEAA5C50185EA90400CCDA82 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = BEAA5C4F185EA90400CCDA82 /* Spaceship.png */; };
-		BEAA5C52185EA90400CCDA82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEAA5C51185EA90400CCDA82 /* Images.xcassets */; };
 		BEAA5C59185EA90400CCDA82 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA5C58185EA90400CCDA82 /* XCTest.framework */; };
 		BEAA5C5A185EA90400CCDA82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA5C2F185EA90400CCDA82 /* Foundation.framework */; };
 		BEAA5C5B185EA90400CCDA82 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA5C33185EA90400CCDA82 /* UIKit.framework */; };
@@ -50,13 +47,10 @@
 		BEAA5C40185EA90400CCDA82 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEAA5C41185EA90400CCDA82 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BEAA5C44185EA90400CCDA82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		BEAA5C47185EA90400CCDA82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		BEAA5C49185EA90400CCDA82 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BEAA5C4A185EA90400CCDA82 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BEAA5C4C185EA90400CCDA82 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		BEAA5C4D185EA90400CCDA82 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
-		BEAA5C4F185EA90400CCDA82 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
-		BEAA5C51185EA90400CCDA82 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BEAA5C57185EA90400CCDA82 /* SpriteKitStarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpriteKitStarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA5C58185EA90400CCDA82 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BEAA5C60185EA90400CCDA82 /* SpriteKitStarsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpriteKitStarsTests-Info.plist"; sourceTree = "<group>"; };
@@ -126,13 +120,10 @@
 				BEAA5C40185EA90400CCDA82 /* AppDelegate.h */,
 				BEAA5C41185EA90400CCDA82 /* AppDelegate.m */,
 				BEAA5C43185EA90400CCDA82 /* Main_iPhone.storyboard */,
-				BEAA5C46185EA90400CCDA82 /* Main_iPad.storyboard */,
 				BEAA5C49185EA90400CCDA82 /* ViewController.h */,
 				BEAA5C4A185EA90400CCDA82 /* ViewController.m */,
 				BEAA5C4C185EA90400CCDA82 /* MyScene.h */,
 				BEAA5C4D185EA90400CCDA82 /* MyScene.m */,
-				BEAA5C4F185EA90400CCDA82 /* Spaceship.png */,
-				BEAA5C51185EA90400CCDA82 /* Images.xcassets */,
 				BEAA5C38185EA90400CCDA82 /* Supporting Files */,
 			);
 			path = SpriteKitStars;
@@ -243,9 +234,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEAA5C50185EA90400CCDA82 /* Spaceship.png in Resources */,
-				BEAA5C52185EA90400CCDA82 /* Images.xcassets in Resources */,
-				BEAA5C48185EA90400CCDA82 /* Main_iPad.storyboard in Resources */,
 				BEAA5C45185EA90400CCDA82 /* Main_iPhone.storyboard in Resources */,
 				BEAA5C3C185EA90400CCDA82 /* InfoPlist.strings in Resources */,
 			);
@@ -306,14 +294,6 @@
 				BEAA5C44185EA90400CCDA82 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		BEAA5C46185EA90400CCDA82 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BEAA5C47185EA90400CCDA82 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		BEAA5C61185EA90400CCDA82 /* InfoPlist.strings */ = {
@@ -490,6 +470,7 @@
 				BEAA5C6A185EA90400CCDA82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEAA5C6B185EA90400CCDA82 /* Build configuration list for PBXNativeTarget "SpriteKitStarsTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +479,7 @@
 				BEAA5C6D185EA90400CCDA82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

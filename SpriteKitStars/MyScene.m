@@ -10,44 +10,50 @@
 
 @implementation MyScene
 
--(id)initWithSize:(CGSize)size {    
+- (id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
+        self.backgroundColor = [UIColor blackColor];
         
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
-        
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
-        
-        [self addChild:myLabel];
+        NSArray *starSpriteNodes = [self addSprites:1000];
+        [self setupStarAnimation:starSpriteNodes];
     }
     return self;
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
-    
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
+- (void)setupStarAnimation:(NSArray *)starSpriteNodes {
+    int durationFactor = 5;
+    for (SKSpriteNode *star in starSpriteNodes) {
+        [self setupStarAnimation:star durationFactor:durationFactor];
+        durationFactor += 2;
+        if (durationFactor == 15) {
+            durationFactor = 5;
+        }
     }
 }
 
--(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+- (void)setupStarAnimation:(SKSpriteNode *)sprite durationFactor:(int)durationFactor {
+    CGRect space = self.frame;
+    int xdelta = space.origin.x + space.size.width - sprite.position.x;
+    CGFloat duration = xdelta / space.size.width * durationFactor;
+    SKAction *action1 = [SKAction moveByX:xdelta y:0 duration:duration];
+    SKAction *action2 = [SKAction moveToX:space.origin.x duration:0];
+    SKAction *action3 = [SKAction moveByX:space.size.width y:0 duration:durationFactor];
+    SKAction *repeatingActions = [SKAction repeatActionForever:[SKAction sequence:@[action2, action3]]];
+    SKAction *actionSequence = [SKAction sequence:@[action1, repeatingActions]];
+    [sprite runAction:actionSequence];
+}
+
+- (NSArray *)addSprites:(int)numSprites {
+    NSMutableArray *starSpriteNodes = [[NSMutableArray alloc] initWithCapacity:numSprites];
+    CGRect space = self.frame;
+    for (int i = 0; i < numSprites; i++) {
+        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size:CGSizeMake(1, 1)];
+        sprite.position = CGPointMake(space.origin.x + arc4random() % (int)space.size.width,
+                                      space.origin.y + arc4random() % (int)space.size.height);
+        [self addChild:sprite];
+        [starSpriteNodes addObject:sprite];
+    }
+    return starSpriteNodes;
 }
 
 @end
