@@ -22,6 +22,7 @@
 		BEAA5C5B185EA90400CCDA82 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA5C33185EA90400CCDA82 /* UIKit.framework */; };
 		BEAA5C63185EA90400CCDA82 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEAA5C61185EA90400CCDA82 /* InfoPlist.strings */; };
 		BEAA5C65185EA90400CCDA82 /* SpriteKitStarsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA5C64185EA90400CCDA82 /* SpriteKitStarsTests.m */; };
+		BEEBB7111867624B00879221 /* StarLayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEBB7101867624B00879221 /* StarLayerNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		BEAA5C60185EA90400CCDA82 /* SpriteKitStarsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpriteKitStarsTests-Info.plist"; sourceTree = "<group>"; };
 		BEAA5C62185EA90400CCDA82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEAA5C64185EA90400CCDA82 /* SpriteKitStarsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteKitStarsTests.m; sourceTree = "<group>"; };
+		BEEBB70F1867624B00879221 /* StarLayerNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarLayerNode.h; sourceTree = "<group>"; };
+		BEEBB7101867624B00879221 /* StarLayerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarLayerNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +123,12 @@
 				BEAA5C40185EA90400CCDA82 /* AppDelegate.h */,
 				BEAA5C41185EA90400CCDA82 /* AppDelegate.m */,
 				BEAA5C43185EA90400CCDA82 /* Main_iPhone.storyboard */,
-				BEAA5C49185EA90400CCDA82 /* ViewController.h */,
-				BEAA5C4A185EA90400CCDA82 /* ViewController.m */,
 				BEAA5C4C185EA90400CCDA82 /* MyScene.h */,
 				BEAA5C4D185EA90400CCDA82 /* MyScene.m */,
+				BEEBB70F1867624B00879221 /* StarLayerNode.h */,
+				BEEBB7101867624B00879221 /* StarLayerNode.m */,
+				BEAA5C49185EA90400CCDA82 /* ViewController.h */,
+				BEAA5C4A185EA90400CCDA82 /* ViewController.m */,
 				BEAA5C38185EA90400CCDA82 /* Supporting Files */,
 			);
 			path = SpriteKitStars;
@@ -255,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEAA5C4E185EA90400CCDA82 /* MyScene.m in Sources */,
+				BEEBB7111867624B00879221 /* StarLayerNode.m in Sources */,
 				BEAA5C4B185EA90400CCDA82 /* ViewController.m in Sources */,
 				BEAA5C42185EA90400CCDA82 /* AppDelegate.m in Sources */,
 				BEAA5C3E185EA90400CCDA82 /* main.m in Sources */,
